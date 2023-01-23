@@ -1,48 +1,110 @@
 
 
-.wrap {
-  padding: 0 25px;
-  padding-top: 200px;
-  transition: 5s;
-
-}
-.wrap:hover .block{
-  /* animation: play 1s linear forwards 2; */
-  /* animation-play-state: paused; */
-
-}
-@keyframes play {
-  0% {
-    opacity: 0;
-    transform: translate(50%, 0);
-  
-   } 
- 100% {
-  opacity: 1;
-  transform: translate(0, 0);
-
- }  
-}
-
-.block {
-  /* width: 800px; */
-  height: 200px;
-  /* background: #333; */
-  border: 5px solid #333;
-  margin: 0 auto;
+body {
+  font-family: 'Montserrat', sans-serif;
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  opacity: 0;
-  transform: translate(50%, 0);
-  transition: 1s;
-  animation: play 1s linear  forwards;
-}
-.box {
-  background: #999;
-  border: 1px solid red;
-  /* width: 300px; */
-  flex: 1 0 300px ;
-  clip-path: polygon();
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #C9FFBF, #F37335 );
+  background-size: 200%;
+  background-position: 0 0;
+  transition: 2s;
 }
 
+.body_style {
+  background-position: 100% 100%;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+h1 {
+  margin-bottom: 50px;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  background: linear-gradient( 125deg, #780206 30% ,transparent , #780206 70% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 600%;
+  background-position: 0 0;
+  animation: text 10s linear infinite;
+}
+
+@keyframes text {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.form {
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 0 15px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px #666;
+  transition: 1s;
+  
+}
+.input:focus {
+  outline: none;
+}
+.btn {
+  width: 100px;
+  transition: 0.5s;
+  background: linear-gradient( 30deg, #fc4a1a , #6be585 );
+  background-size: 800%;
+  background-position: 100% 100%;
+  border: none;
+  padding: 10px 0;
+  border-radius: 3px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #fff;
+}
+
+
+.left {
+  transform: translate(-100%);
+  background-position: 0 0;
+  background-size: 1000%;
+
+}
+.right {
+  transform: translate(100%);
+  background-position: 0 0;
+  background-size: 1000%;
+
+}
+
+.error {
+  box-shadow: inset 0 0 10px red;
+  transition: 0.5s;
+}
+
+.good {
+  box-shadow: inset 0 0 10px green;
+  transition: 0.5s;
+}
